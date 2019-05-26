@@ -1,0 +1,134 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>CSS preprocessors.SASS.</title>
+
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="css/theme/black.css">
+
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="lib/css/zenburn.css">
+
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+  </script>
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section style="background-color: rgb(255, 255, 255);">
+        <img src="./image/mongodb-logo.jpg" alt="logo">
+      </section>
+
+      <section>
+        <img style="width: 20%; height: 20%; background-color: rgb(255, 255, 255); border-radius: 100%;"
+          src="./image/mongodb.png" alt="logo">
+        <p><span style="color: #00ffaa;"><b>MongoDB</b></span> is a NoSQL database which stores the data in form of
+          key-value pairs. It is an Open Source, Document Database which provides high performance and scalability.</p>
+      </section>
+      <section>
+        <section>
+          <h4>What is Document based storage?</h4>
+        </section>
+        <section>
+          <p><span style="color: #00ffaa;"><b>A Document</b></span> is nothing but a data structure with name-value
+            pairs like in JSON.</p>
+        </section>
+        <section>
+          <img src="./image/obj-example.jpg" alt="obj">
+        </section>
+      </section>
+      <section>
+        <section>
+          <p style="font-size: 1.2em;">History of MongoDB</p>
+        </section>
+        <section>
+          <img src="./image/Eliot Horowitz.jpg" alt="Eliot Horowitz">
+          <h5>Eliot Horowitz</h5>
+        </section>
+        <section>
+          <img src="./image/Dwight Merriman.jpg" alt="Dwight Merriman">
+          <h5>Dwight Merriman</h5>
+        </section>
+      </section>
+      <section>
+        <img src="./image/slide_5.jpg" alt="Organizations that use MongoDB" style="height: 70vh;">
+      </section>
+      <section>
+        <img src="./image/MongoDB_Features.jpg" alt="MongoDB_Features" style="height: 80vh;">
+      </section>
+      <section>
+        <h4 style="color: #00ffaa;">Overview of MongoDB</h4>
+        <img src="./image/overview-of-mongodb.png" alt="Structure in MongoDB">
+      </section>
+      <section>
+        <h2 style="color: #00ffaa;">Database Create and Drop</h4>
+          <section>
+            <h5>Creating a Database</h5>
+            <pre>use <i>database_name</i></pre>
+          </section>
+          <section>
+            <h5>Drop a Database</h5>
+            <pre>show dbs</pre>
+            <pre>db.dropDatabase()</pre>
+          </section>
+      </section>
+      <section>
+        <h2 style="color: #00ffaa;">Collection Create and Drop</h4>
+          <section>
+            <h5>Creating a Collection</h5>
+            <pre>db.student.insert({ name : "Ivan" })</pre>
+            <pre>db.createCollection(name, options)</pre>
+          </section>
+          <section>
+            <h5>Drop a Collection</h5>
+            <pre>db.collection_name.drop()</pre>
+          </section>
+      </section>
+      <section>
+        <h2 style="color: #00ffaa;">CRUD Operations in MongoDB</h2>
+        <pre>db.collection.insert()</pre>
+        <pre>db.collection_name.find()</pre>
+        <pre>db.collection_name.find({"fieldname":"value"})</pre>
+        <pre>db.collection_name.update()</pre>
+        <pre>db.student.update({
+            "regNo": "3014"	
+          },
+          $set:
+          {
+            "name":"Ivan"
+          })</pre>
+        <pre>db.collection_name.remove({"fieldname":"value"})</pre>
+      </section>
+      <section>
+        <h3>THE END</h1>
+      </section>
+    </div>
+  </div>
+
+  <script src="lib/js/head.min.js"></script>
+  <script src="js/reveal.js"></script>
+
+  <script>
+    Reveal.initialize({
+      dependencies: [
+        { src: 'plugin/markdown/marked.js' },
+        { src: 'plugin/markdown/markdown.js' },
+        { src: 'plugin/notes/notes.js', async: true },
+        { src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
+      ]
+    });
+  </script>
+</body>
+
+</html>
